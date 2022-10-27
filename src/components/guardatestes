@@ -1,0 +1,50 @@
+        <NameInput
+          data-testid="name-input"
+          value={ state.nameInput }
+          handleChanges={ this.handleChanges }
+        />
+        <DescriptionInput
+          data-testid="description-input"
+          value={ state.descriptionInput }
+          handleChanges={ this.handleChanges }
+        />
+        <Attr1Input
+          data-testid="attr1-input"
+          value={ state.attr1Input }
+          handleChanges={ this.handleChanges }
+        />
+        <Attr2Input
+          data-testid="attr2-input"
+          value={ state.attr2Input }
+          handleChanges={ this.handleChanges }
+        />
+        <Attr3Input
+          data-testid="attr3-input"
+          value={ state.attr3Input }
+          handleChanges={ this.handleChanges }
+        />
+        <ImageInput
+          data-testid="image-input"
+          value={ state.imageInput }
+          handleChanges={ this.handleChanges }
+        />
+        <RareInput
+          data-testid="rare-input"
+          value={ state.rareInput }
+          handleChanges={ this.handleChanges }
+        />
+        <TrunfoInput
+          data-testid="trunfo-input"
+          value={ state.trunfoInput }
+          handleChanges={ this.handleChanges }
+        />
+        
+        /********************* STATE *************************/
+
+        descriptionInput: '',
+        attr1Input: 0,
+        attr2Input: 0,
+        attr3Input: 0,
+        imageInput: '',
+        rareInput: '',
+        trunfoInput: false,
