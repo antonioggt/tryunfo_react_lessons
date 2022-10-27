@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 
 class TrunfoInput extends React.Component {
   render() {
@@ -11,3 +11,4 @@ class TrunfoInput extends React.Component {
 }
 
 export default TrunfoInput;
+*/

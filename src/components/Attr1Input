@@ -1,6 +1,6 @@
-import React from 'react';
+/* import React from 'react';
 
-class Attr3Input extends React.Component {
+class Attr1Input extends React.Component {
   render() {
     const { value } = this.props
 
@@ -10,4 +10,5 @@ class Attr3Input extends React.Component {
   }
 }
 
-export default Attr3Input;
+export default Attr1Input;
+*/
