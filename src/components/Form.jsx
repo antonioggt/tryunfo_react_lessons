@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 /* import NameInput from './NameInput';
 import DescriptionInput from './DescriptionInput';
 import Attr1Input from './Attr1Input';
@@ -25,7 +26,7 @@ class Form extends React.Component {
     } = this.props;
     return (
       <form>
-        <label>
+        <label htmlFor="name-input">
           name-input
           <input
             value={ cardName }
@@ -34,7 +35,7 @@ class Form extends React.Component {
             data-testid="name-input"
           />
         </label>
-        <label>
+        <label htmlFor="description-input">
           description-input
           <input
             value={ cardDescription }
@@ -43,7 +44,7 @@ class Form extends React.Component {
             data-testid="description-input"
           />
         </label>
-        <label>
+        <label htmlFor="attr1-input">
           attr1-input
           <input
             value={ cardAttr1 }
@@ -52,7 +53,7 @@ class Form extends React.Component {
             data-testid="attr1-input"
           />
         </label>
-        <label>
+        <label htmlFor="attr2-input">
           attr2-input
           <input
             value={ cardAttr2 }
@@ -61,7 +62,7 @@ class Form extends React.Component {
             data-testid="attr2-input"
           />
         </label>
-        <label>
+        <label htmlFor="attr3-input">
           attr3-input
           <input
             value={ cardAttr3 }
@@ -70,7 +71,7 @@ class Form extends React.Component {
             data-testid="attr3-input"
           />
         </label>
-        <label>
+        <label htmlFor="image-input">
           image-input
           <input
             value={ cardImage }
@@ -79,7 +80,7 @@ class Form extends React.Component {
             data-testid="image-input"
           />
         </label>
-        <label>
+        <label htmlFor="rare-input">
           rare-input
           <select
             data-testid="rare-input"
@@ -91,7 +92,7 @@ class Form extends React.Component {
             <option value="muito raro"> </option>
           </select>
         </label>
-        <label>
+        <label htmlFor="trunfo-input">
           trunfo-input
           <input
             checked={ cardTrunfo }
@@ -112,5 +113,19 @@ class Form extends React.Component {
     );
   }
 }
+
+Form.propTypes = {
+  cardName: PropTypes.string.isRequired,
+  onInputChange: PropTypes.func.isRequired,
+  cardDescription: PropTypes.string.isRequired,
+  cardAttr1: PropTypes.number.isRequired,
+  cardAttr2: PropTypes.number.isRequired,
+  cardAttr3: PropTypes.number.isRequired,
+  cardImage: PropTypes.string.isRequired,
+  cardRare: PropTypes.string.isRequired,
+  cardTrunfo: PropTypes.bool.isRequired,
+  isSaveButtonDisabled: PropTypes.bool.isRequired,
+  onSaveButtonClick: PropTypes.func.isRequired,
+};
 
 export default Form;
