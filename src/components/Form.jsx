@@ -86,9 +86,9 @@ class Form extends React.Component {
             onChange={ onInputChange }
             value={ cardRare }
           >
-            <option value="normal"></option>
-            <option value="raro"></option>
-            <option value="muito raro"></option>
+            <option value="normal"> </option>
+            <option value="raro"> </option>
+            <option value="muito raro"> </option>
           </select>
         </label>
         <label>
@@ -104,7 +104,7 @@ class Form extends React.Component {
           type="submit"
           data-testid="save-button"
           disabled={ isSaveButtonDisabled }
-          onClick= { onSaveButtonClick }
+          onClick={ onSaveButtonClick }
         >
           Salvar
         </button>
