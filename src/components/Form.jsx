@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './form.css';
 /* import NameInput from './NameInput';
 import DescriptionInput from './DescriptionInput';
 import Attr1Input from './Attr1Input';
@@ -25,7 +26,7 @@ class Form extends React.Component {
       onSaveButtonClick,
     } = this.props;
     return (
-      <form>
+      <form className="form__container">
         <label htmlFor="name-input">
           name-input
           <input
@@ -112,7 +113,7 @@ class Form extends React.Component {
         <button
           type="submit"
           data-testid="save-button"
-          disabled={ isSaveButtonDisabled }
+          disabled={ !isSaveButtonDisabled }
           onClick={ onSaveButtonClick }
         >
           Salvar
