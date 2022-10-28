@@ -29,6 +29,7 @@ class Form extends React.Component {
         <label htmlFor="name-input">
           name-input
           <input
+            name="cardName"
             value={ cardName }
             onChange={ onInputChange }
             type="text"
@@ -38,6 +39,7 @@ class Form extends React.Component {
         <label htmlFor="description-input">
           description-input
           <input
+            name="cardDescription"
             value={ cardDescription }
             onChange={ onInputChange }
             type="text"
@@ -47,6 +49,7 @@ class Form extends React.Component {
         <label htmlFor="attr1-input">
           attr1-input
           <input
+            name="cardAttr1"
             value={ cardAttr1 }
             onChange={ onInputChange }
             type="number"
@@ -56,6 +59,7 @@ class Form extends React.Component {
         <label htmlFor="attr2-input">
           attr2-input
           <input
+            name="cardAttr2"
             value={ cardAttr2 }
             onChange={ onInputChange }
             type="number"
@@ -65,6 +69,7 @@ class Form extends React.Component {
         <label htmlFor="attr3-input">
           attr3-input
           <input
+            name="cardAttr3"
             value={ cardAttr3 }
             onChange={ onInputChange }
             type="number"
@@ -74,6 +79,7 @@ class Form extends React.Component {
         <label htmlFor="image-input">
           image-input
           <input
+            name="cardImage"
             value={ cardImage }
             onChange={ onInputChange }
             type="text"
@@ -83,18 +89,20 @@ class Form extends React.Component {
         <label htmlFor="rare-input">
           rare-input
           <select
+            name="cardRare"
             data-testid="rare-input"
             onChange={ onInputChange }
             value={ cardRare }
           >
-            <option value="normal"> </option>
-            <option value="raro"> </option>
-            <option value="muito raro"> </option>
+            <option value="normal"> normal </option>
+            <option value="raro"> raro </option>
+            <option value="muito raro"> muito raro </option>
           </select>
         </label>
         <label htmlFor="trunfo-input">
           trunfo-input
           <input
+            name="cardTrunfo"
             checked={ cardTrunfo }
             onChange={ onInputChange }
             type="checkbox"
