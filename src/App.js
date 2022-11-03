@@ -157,8 +157,7 @@ class App extends React.Component {
                     cardTrunfo={ card.cardTrunfo }
                   />
                 </li>
-              )
-
+              );
             })
           }
         </ul>
