@@ -119,6 +119,7 @@ class App extends React.Component {
       hasTrunfo,
       onInputChange,
       onSaveButtonClick,
+      savedCards,
     } = this.state;
 
     const formProps = {
@@ -139,6 +140,28 @@ class App extends React.Component {
       <>
         <Form { ...formProps } isSaveButtonDisabled={ this.isSaveButtonDisabled() } />
         <Card { ...this.state } />
+        <ul>
+          {
+            savedCards.map((card) => {
+              const zua = 1;
+              return (
+                <li key={ `${card.cardName}${zua}` }>
+                  <Card
+                    cardName={ card.cardName }
+                    cardDescription={ card.cardDescription }
+                    cardAttr1={ card.cardAttr1 }
+                    cardAttr2={ card.cardAttr2 }
+                    cardAttr3={ card.cardAttr3 }
+                    cardImage={ card.cardImage }
+                    cardRare={ card.cardRare }
+                    cardTrunfo={ card.cardTrunfo }
+                  />
+                </li>
+              )
+
+            })
+          }
+        </ul>
       </>
 
     );
