@@ -19,6 +19,7 @@ class App extends React.Component {
       isSaveButtonDisabled: this.isSaveButtonDisabled,
       onInputChange: this.onInputChange,
       onSaveButtonClick: this.onSaveButtonClick,
+      savedCards: [],
     };
   }
 
@@ -30,6 +31,43 @@ class App extends React.Component {
   };
 
   onSaveButtonClick = () => {
+    const {
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+      cardTrunfo,
+      savedCards,
+    } = this.state;
+
+    const savedCard = [...savedCards];
+
+    savedCard.push({
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+      cardTrunfo,
+    });
+
+    this.setState({
+      cardName: '',
+      cardDescription: '',
+      cardAttr1: 0,
+      cardAttr2: 0,
+      cardAttr3: 0,
+      cardImage: '',
+      cardRare: '',
+      cardTrunfo: false,
+      hasTrunfo: cardTrunfo,
+      savedCards: savedCard,
+    });
   };
 
   isSaveButtonDisabled = () => {
@@ -52,19 +90,19 @@ class App extends React.Component {
       cardAttr1 <= magicNum && cardAttr2 <= magicNum && cardAttr3 <= magicNum);
     const magicTotNum = 210;
     const maxTotAttr = (
-      Number(cardAttr1) + Number(cardAttr2) + Number(cardAttr3) <= magicTotNum);
+      +cardAttr1 + +cardAttr2 + +cardAttr3 <= magicTotNum);
     const zero = 0;
     const minAttr = (
       cardAttr1 >= zero && cardAttr2 >= zero && cardAttr3 >= zero);
 
     return (
-      validateName
+      !(validateName
    && validateDescription
    && validateImage
    && validadeRare
    && maxAttr
    && maxTotAttr
-   && minAttr
+   && minAttr)
     );
   };
 
